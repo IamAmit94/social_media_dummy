@@ -1,0 +1,460 @@
+{
+	"info": {
+		"_postman_id": "b77c5aef-bc52-4fb3-8ca3-7982a9f42230",
+		"name": "Social Media APP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31881233"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"amit2\",\r\n    \"email\": \"amit.vcrew@gmail.com\",\r\n    \"password\": \"Amit123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}{{subdomain}}register",
+							"host": [
+								"{{url}}{{subdomain}}register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"amit2@email.com\",\r\n    \"password\": \"Amit123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}{{subdomain}}/login",
+							"host": [
+								"{{url}}{{subdomain}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}{{subdomain}}logout",
+							"host": [
+								"{{url}}{{subdomain}}logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\": \"Amit1234\",\r\n     \"newPassword\": \"Amit123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}{{subdomain}}update/password",
+							"host": [
+								"{{url}}{{subdomain}}update"
+							],
+							"path": [
+								"password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"aaa\",\r\n    \"email\": \"abc@update.com\",\r\n    \"avatar\" :\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}{{subdomain}}update/profile",
+							"host": [
+								"{{url}}{{subdomain}}update"
+							],
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete My Profile",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}{{subdomain}}delete/me",
+							"host": [
+								"{{url}}{{subdomain}}delete"
+							],
+							"path": [
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get My Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}{{subdomain}}/me",
+							"host": [
+								"{{url}}{{subdomain}}"
+							],
+							"path": [
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}{{subdomain}}users",
+							"host": [
+								"{{url}}{{subdomain}}users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}{{subdomain}}user/659f8283d78ec2102e9e02a5",
+							"host": [
+								"{{url}}{{subdomain}}user"
+							],
+							"path": [
+								"659f8283d78ec2102e9e02a5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"amit.vcrew@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}{{subdomain}}forgot/password",
+							"host": [
+								"{{url}}{{subdomain}}forgot"
+							],
+							"path": [
+								"password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/v1/password/reset/d37a72bc57be25e03d85f9adb8386777ba190634",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"password",
+								"reset",
+								"d37a72bc57be25e03d85f9adb8386777ba190634"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Create Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"caption\" : \"this post is 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}{{subdomain}}post/upload",
+							"host": [
+								"{{url}}{{subdomain}}post"
+							],
+							"path": [
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Like & Dislike",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}{{subdomain}}post/659f8c3660c12d622332133f",
+							"host": [
+								"{{url}}{{subdomain}}post"
+							],
+							"path": [
+								"659f8c3660c12d622332133f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Post",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}{{subdomain}}post/659f9aa85574dfae99dcf867",
+							"host": [
+								"{{url}}{{subdomain}}post"
+							],
+							"path": [
+								"659f9aa85574dfae99dcf867"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Post of following",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}{{subdomain}}posts",
+							"host": [
+								"{{url}}{{subdomain}}posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Caption",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"caption\": \"updated caption\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}{{subdomain}}post/659f9aa85574dfae99dcf867",
+							"host": [
+								"{{url}}{{subdomain}}post"
+							],
+							"path": [
+								"659f9aa85574dfae99dcf867"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add or Update Comment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"comment\": \"new comment added another user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}{{subdomain}}post/comment/659fb008c6dcb6e793dd4b16",
+							"host": [
+								"{{url}}{{subdomain}}post"
+							],
+							"path": [
+								"comment",
+								"659fb008c6dcb6e793dd4b16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Comment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}{{subdomain}}post/comment/659fb008c6dcb6e793dd4b16",
+							"host": [
+								"{{url}}{{subdomain}}post"
+							],
+							"path": [
+								"comment",
+								"659fb008c6dcb6e793dd4b16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch All My Posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}{{subdomain}}my/posts",
+							"host": [
+								"{{url}}{{subdomain}}my"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}{{subdomain}}userposts/659fb021c6dcb6e793dd4b1b",
+							"host": [
+								"{{url}}{{subdomain}}userposts"
+							],
+							"path": [
+								"659fb021c6dcb6e793dd4b1b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Follow",
+			"item": [
+				{
+					"name": "Follow or UnFollow User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}{{subdomain}}/follow/659f890a38b87d7b6cc00e45",
+							"host": [
+								"{{url}}{{subdomain}}"
+							],
+							"path": [
+								"follow",
+								"659f890a38b87d7b6cc00e45"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
